@@ -1,0 +1,47 @@
+{
+  "name": "launchpad",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "vitest",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "latest",
+    "@google/genai": "^2.25.0",
+    "@prisma/adapter-pg": "latest",
+    "@prisma/client": "^7.10.0",
+    "bcryptjs": "latest",
+    "next": "latest",
+    "next-auth": "^5.0.0-beta.32",
+    "pg": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/pg": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "jsdom": "^29.1.1",
+    "postcss": "latest",
+    "prisma": "^7.10.0",
+    "tailwindcss": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "^5.0.3"
+  },
+  "type": "module"
+}

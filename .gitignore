@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env.*.local
+src/generated/prisma
+prisma/migrations
+*.log
+.DS_Store
+test-results
+playwright-report
+*.tar
+*.tar.gz
+*.tsbuildinfo
