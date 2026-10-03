@@ -1,32 +1,88 @@
 # LaunchPad
 
-AI-assisted project management workspace.
+> From idea to execution.
 
-## Current milestone: M02 — Database + Authentication
+LaunchPad is an AI-powered project and team workspace designed to help individuals and small teams turn ideas into structured, actionable projects.
 
-Implemented:
-- Prisma 7 PostgreSQL schema
-- Auth.js credentials authentication
-- Password hashing with bcryptjs
-- Registration and login pages
-- JWT-backed sessions
-- Protected dashboard
-- User-owned project/task queries
-- Server-side ownership boundary foundation
+It combines project management, task tracking, milestones, search, and AI assistance in one workspace.
 
-## Local setup
+## Features
 
-1. Install Node.js 22.12+.
-2. Copy `.env.example` to `.env`.
-3. Add a PostgreSQL connection string.
-4. Generate `AUTH_SECRET` with `npx auth secret`.
-5. Install dependencies with `npm install`.
-6. Run `npm run db:migrate -- --name init`.
-7. Run `npm run db:generate`.
-8. Start with `npm run dev`.
+- 🔐 User registration and authentication
+- 📊 Personal project dashboard
+- 📁 Project creation and management
+- ✅ Task management with status and priority
+- 🎯 Milestones
+- 🤖 AI Project Planner
+- 💬 AI Project Assistant
+- 🔎 Project and task search
+- 🛡️ Project ownership and authorization
+- 📈 Dashboard progress statistics
+- 📝 Activity tracking
+- 🧪 Unit and end-to-end testing
+- 📱 Responsive interface
 
-The app should then be available at `http://localhost:3000`.
+## AI Features
 
-## Next milestone
+### AI Project Planner
 
-M03 — Application shell + dashboard polish.
+Describe an idea or goal and LaunchPad can generate a structured project plan containing:
+
+- Project information
+- Milestones
+- Tasks
+- Task priorities
+
+The generated plan is saved directly to the user's workspace.
+
+### AI Project Assistant
+
+Inside a project, users can ask questions about their actual project data, including:
+
+- What should I work on next?
+- Project summaries
+- Potential blockers
+- High-priority work
+
+The assistant uses the project's tasks, milestones, and other project information as context.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- PostgreSQL
+- Prisma
+- Auth.js
+- Google Gemini API
+- Zod
+- Vitest
+- Playwright
+- Vercel
+
+## Project Structure
+
+LaunchPad/
+├── prisma/
+│   └── schema.prisma
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── dashboard/
+│   │   ├── login/
+│   │   └── register/
+│   ├── components/
+│   ├── generated/
+│   ├── lib/
+│   └── auth.ts
+├── tests/
+│   ├── dashboard.spec.ts
+│   └── smoke.test.ts
+├── .env.example
+├── next.config.ts
+├── package.json
+├── playwright.config.ts
+├── prisma.config.ts
+├── tsconfig.json
+└── vitest.config.ts
