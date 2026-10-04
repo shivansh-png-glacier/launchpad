@@ -1,5 +1,7 @@
 # LaunchPad
 
+> 🚀 Live Demo: https://launchpad-alpha-pink.vercel.app
+
 > From idea to execution.
 
 LaunchPad is an AI-powered project and team workspace designed to help individuals and small teams turn ideas into structured, actionable projects.
