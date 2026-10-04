@@ -6,6 +6,26 @@ LaunchPad is an AI-powered project and team workspace designed to help individua
 
 It combines project management, task tracking, milestones, search, and AI assistance in one workspace.
 
+## Product Preview
+
+### Dashboard
+
+The LaunchPad dashboard gives users a clear overview of their projects, tasks, progress, and AI tools.
+
+![LaunchPad Dashboard](docs/screenshots/dashboard.png)
+
+### AI Project Planner
+
+Turn an idea into a structured project with milestones and actionable tasks using AI.
+
+![AI Project Planner](docs/screenshots/ai-planner.png)
+
+### Project Workspace
+
+Manage tasks, milestones, activity, and AI-assisted project decisions from one workspace.
+
+![LaunchPad Project Workspace](docs/screenshots/project-workspace.png)
+
 ## Features
 
 - 🔐 User registration and authentication
