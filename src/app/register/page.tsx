@@ -3,16 +3,118 @@ import { RegisterForm } from "./register-form";
 
 export default function RegisterPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-50 px-6 py-12">
-      <section className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-        <div className="mb-8">
-          <Link href="/" className="text-sm font-semibold text-slate-500">← LaunchPad</Link>
-          <h1 className="mt-6 text-3xl font-bold tracking-tight text-slate-950">Create your account</h1>
-          <p className="mt-2 text-slate-600">Start turning ideas into projects.</p>
+    <main className="min-h-screen bg-slate-50 px-4 py-8 sm:px-6">
+      <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-5xl items-center justify-center">
+        <div className="grid w-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl lg:grid-cols-[0.9fr_1.1fr]">
+          {/* Brand panel */}
+          <section className="relative overflow-hidden launchpad-gradient p-8 text-white sm:p-10 lg:p-12">
+            <div className="relative z-10 flex h-full flex-col">
+              <Link
+                href="/"
+                className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-white/90 transition hover:text-white"
+              >
+                <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white">
+                  <img
+                    src="/launchpad-logo.png"
+                    alt="LaunchPad"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <span className="launchpad-wordmark text-xl">
+                  LaunchPad
+                </span>
+              </Link>
+
+              <div className="mt-auto pt-16 lg:pt-32">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold backdrop-blur">
+                  <span>✦</span>
+                  Your workspace starts here
+                </div>
+
+                <h2 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">
+                  Build. Organize. Launch.
+                </h2>
+
+                <p className="mt-4 max-w-sm text-sm leading-6 text-white/80">
+                  Create projects, break ideas into tasks, track progress, and
+                  let AI help you plan the work.
+                </p>
+
+                <div className="mt-8 grid gap-3">
+                  <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 p-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-sm">
+                      ✓
+                    </span>
+                    <span className="text-sm font-medium text-white/90">
+                      One place for your projects
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 p-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-sm">
+                      ✦
+                    </span>
+                    <span className="text-sm font-medium text-white/90">
+                      AI-powered planning
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+            <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+          </section>
+
+          {/* Register panel */}
+          <section className="p-6 sm:p-10 lg:p-12">
+            <div className="mx-auto max-w-md">
+              <div className="mb-8">
+                <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white">
+                  <img
+                    src="/launchpad-logo.png"
+                    alt="LaunchPad"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+
+                <p className="mt-6 text-xs font-bold uppercase tracking-[0.14em] text-[var(--launchpad-teal)]">
+                  Get started
+                </p>
+
+                <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+                  Create your account
+                </h1>
+
+                <p className="mt-3 text-sm leading-6 text-slate-500">
+                  Start turning your ideas into organized projects.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-slate-50/50 p-5 sm:p-6">
+                <RegisterForm />
+              </div>
+
+              <p className="mt-6 text-center text-sm text-slate-500">
+                Already have an account?{" "}
+                <Link
+                  href="/login"
+                  className="font-semibold text-[var(--launchpad-teal)] transition hover:text-[var(--launchpad-teal-dark)]"
+                >
+                  Sign in
+                </Link>
+              </p>
+
+              <Link
+                href="/"
+                className="mt-5 block text-center text-xs font-medium text-slate-400 transition hover:text-slate-600"
+              >
+                ← Back to home
+              </Link>
+            </div>
+          </section>
         </div>
-        <RegisterForm />
-        <p className="mt-6 text-center text-sm text-slate-600">Already have an account? <Link href="/login" className="font-semibold text-slate-950">Sign in</Link></p>
-      </section>
+      </div>
     </main>
   );
 }

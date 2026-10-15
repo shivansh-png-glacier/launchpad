@@ -1,18 +1,159 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7f5;
-  --foreground: #171717;
-  --muted: #737373;
-  --border: #e5e5e5;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #12a8b2;
+  --primary-hover: #078c99;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
-button, input, textarea, select { font: inherit; }
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #70dd55;
+  color: #102a43;
+}
+
+/* =========================================================
+   LaunchPad Brand Theme
+   Green + Teal visual identity
+   ========================================================= */
+
+:root {
+  --launchpad-green: #70dd55;
+  --launchpad-green-dark: #55c943;
+  --launchpad-teal: #12a8b2;
+  --launchpad-teal-dark: #078c99;
+
+  --launchpad-navy: #102a43;
+  --launchpad-text: #172b4d;
+  --launchpad-muted: #627d98;
+
+  --launchpad-bg: #f5fbf7;
+  --launchpad-surface: #ffffff;
+  --launchpad-border: #d9e8df;
+
+  --launchpad-gradient: linear-gradient(
+    135deg,
+    var(--launchpad-green) 0%,
+    var(--launchpad-teal) 100%
+  );
+}
+
+/* Primary brand colors */
+.bg-indigo-600 {
+  background-color: var(--launchpad-teal) !important;
+}
+
+.bg-indigo-700 {
+  background-color: var(--launchpad-teal-dark) !important;
+}
+
+.text-indigo-600 {
+  color: var(--launchpad-teal) !important;
+}
+
+.text-indigo-700 {
+  color: var(--launchpad-teal-dark) !important;
+}
+
+.border-indigo-200 {
+  border-color: var(--launchpad-border) !important;
+}
+
+.border-indigo-600 {
+  border-color: var(--launchpad-teal) !important;
+}
+
+/* Violet surfaces → brand gradient */
+.bg-violet-600,
+.bg-violet-500 {
+  background: var(--launchpad-gradient) !important;
+}
+
+.text-violet-600,
+.text-violet-700 {
+  color: var(--launchpad-teal-dark) !important;
+}
+
+/* Common light brand surfaces */
+.bg-indigo-50 {
+  background-color: #edf9f1 !important;
+}
+
+.bg-violet-50 {
+  background-color: #edf9f1 !important;
+}
+
+/* Progress bars and brand accents */
+.bg-indigo-500 {
+  background-color: var(--launchpad-green) !important;
+}
+
+.bg-violet-500 {
+  background: var(--launchpad-gradient) !important;
+}
+
+/* Hover states */
+.hover\:bg-indigo-700:hover {
+  background-color: var(--launchpad-teal-dark) !important;
+}
+
+.hover\:text-indigo-700:hover {
+  color: var(--launchpad-teal-dark) !important;
+}
+
+.hover\:border-indigo-200:hover {
+  border-color: var(--launchpad-border) !important;
+}
+
+/* Brand gradient helper */
+.launchpad-gradient {
+  background: var(--launchpad-gradient);
+}
+
+.launchpad-text-gradient {
+  background: var(--launchpad-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.launchpad-wordmark {
+  font-family: var(--font-lobster), cursive;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
